@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>Redirecting to PayU...</title>
+<style>
+body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+h3 { color: #333; }
+.loader { border: 5px solid #f3f3f3; border-top: 5px solid #3498db; border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite; margin: 20px auto; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+</style>
+</head>
+<body onload='document.payuForm.submit()'>
+<h3>Please wait while we redirect you to PayU...</h3>
+<div class='loader'></div>
+<form name='payuForm' method='post' action='https://secure.payu.in/_payment'>
+  <input type='hidden' name='key' value='2iDE1L' />
+  <input type='hidden' name='txnid' value='TXN17670062197541806' />
+  <input type='hidden' name='amount' value='10' />
+  <input type='hidden' name='productinfo' value='DESKTOP' />
+  <input type='hidden' name='firstname' value='Sunit' />
+  <input type='hidden' name='email' value='sunit.kumar@mail.com' />
+  <input type='hidden' name='phone' value='9876543210' />
+  <input type='hidden' name='surl' value='https://test.payu.in/admin/test_response' />
+  <input type='hidden' name='furl' value='https://test.payu.in/admin/test_response' />
+  <input type='hidden' name='enforce_paymethod' value='upi' />
+  <input type='hidden' name='hash' value='fa8d55c50009260cd5f4a55c6e5af090a6fee0082840692763aa8861ac543a16ffb1a6ce2051e1a5d7b4c5b12ec23d3e8977aa39ef4045482fec572d6f4f1da5' />
+  <button type='submit' style='margin-top: 20px; padding: 10px 30px; font-size: 16px; cursor: pointer;'>Pay Now</button>
+</form>
+</body>
+</html>
