@@ -1,31 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset='UTF-8'>
-<title>Redirecting to PayU...</title>
-<style>
-body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-h3 { color: #333; }
-.loader { border: 5px solid #f3f3f3; border-top: 5px solid #3498db; border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite; margin: 20px auto; }
-@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Button</title>
 </head>
-<body onload='document.payuForm.submit()'>
-<h3>Please wait while we redirect you to PayU...</h3>
-<div class='loader'></div>
-<form name='payuForm' method='post' action='https://secure.payu.in/_payment'>
-  <input type='hidden' name='key' value='2iDE1L' />
-  <input type='hidden' name='txnid' value='1767779251' />
-  <input type='hidden' name='amount' value='5' />
-  <input type='hidden' name='phone' value='9876543210' />
-  <input type='hidden' name='productinfo' value='Deposit' />
-  <input type='hidden' name='firstname' value='Kapil' />
-  <input type='hidden' name='email' value='kapil@emailtest.com' />
-  <input type='hidden' name='surl' value='https://www.google.com/' />
-  <input type='hidden' name='furl' value='https://paycord.com/' />
-  <input type='hidden' name='enforce_paymethod' value='upi' />
-  <input type='hidden' name='hash' value='db42f1d6d2453f480b89b72562e4ccf5f8c682a7a7edf15c3a92cb8e88f4c90bb14a11e33b6709206a7b54a87d765576641da3e2e849edfcbd18081ec84ad4aa' />
-  <button type='submit' style='margin-top: 20px; padding: 10px 30px; font-size: 16px; cursor: pointer;'>Pay Now</button>
-</form>
+<body>
+  <button onclick="window.location.href='paytm://upi/pay?pa=CCFLPRIVATELIMITED-13452890.payu@indus&pn=CCFL PRIVATE LIMITED&tr=26752440823&tid=PPPL26752440823070126173315695e4b83&am=5.05&cu=INR&tn=UPIIntent'">
+        CLICK ON ME
+    </button>
 </body>
 </html>
