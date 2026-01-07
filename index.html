@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,5 +7,37 @@
 </head>
 <body>
     <a class="payment-apps__item" href="phonepe://upi/pay?pa=Ccflpvtltd.payu@mairtel&pn=CCFL%20PRIVATE%20LIMITED&tr=26752880861&tid=PPPL26752880861070126180258695e527a&am=5.05&cu=INR&tn=UPIIntent">CLICK ON ME</a>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>Redirecting to PayU...</title>
+<style>
+body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+h3 { color: #333; }
+.loader { border: 5px solid #f3f3f3; border-top: 5px solid #3498db; border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite; margin: 20px auto; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+</style>
+</head>
+<body onload='document.payuForm.submit()'>
+<h3>Please wait while we redirect you to PayU...</h3>
+<div class='loader'></div>
+<form name='payuForm' method='post' action='https://secure.payu.in/_payment'>
+  <input type='hidden' name='key' value='2iDE1L' />
+  <input type='hidden' name='txnid' value='1767790379' />
+  <input type='hidden' name='amount' value='5' />
+  <input type='hidden' name='phone' value='9876543210' />
+  <input type='hidden' name='productinfo' value='Deposit' />
+  <input type='hidden' name='firstname' value='Kapil' />
+  <input type='hidden' name='email' value='kapil@emailtest.com' />
+  <input type='hidden' name='surl' value='https://www.google.com/' />
+  <input type='hidden' name='furl' value='https://paycord.com/' />
+  <input type='hidden' name='enforce_paymethod' value='upi' />
+  <input type='hidden' name='hash' value='2a509c14f8508ac67a7efb121747097487eca2b2dec03f9e8f53eda823b482aafed2edbb9a2dc550bf45679e6c013afb08f45c2fc209133e612f97060cc6da7e' />
+  <button type='submit' style='margin-top: 20px; padding: 10px 30px; font-size: 16px; cursor: pointer;'>Pay Now</button>
+</form>
 </body>
 </html>
